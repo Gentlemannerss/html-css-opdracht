@@ -57,15 +57,16 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 300px;
-    padding: 0 20px;
+    padding: 0 2em 2em 2em;
     text-align: center;
     color: white;
     line-height: 1.5;
 }
 
 nav {
-
+    display: flex;
+    align-items: end;
+    justify-content: end;
 }
 
 nav > ul {
@@ -76,6 +77,8 @@ nav > ul {
 }
 
 header > div {
+    margin-top: 3em;
+    margin-bottom: 5em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,12 +86,14 @@ header > div {
 }
 
 .workTogether {
-    background-color: indianred;
+    background-color: var(--pink-color);
     font-size: 0.7em;
-    padding: 10px;
+    padding: 15px;
+    margin-top: 1em;
     border-radius: 35px;
     border: none;
     color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.50);
 }
 
 /* --------------- 4.2 Introduction ------------------- */
@@ -144,14 +149,20 @@ header > div {
     align-items: center;
     flex: 1 1 auto;
     gap: 2em;
+    flex-wrap: wrap;
 }
 
 .services {
     border: 1px solid var(--blue-color);
     padding: 2em;
-    max-width: 40em;
-    max-height: 40em;
+    max-width: 20rem;
+    max-height: 20rem;
     font-size: 14px;
+}
+
+.services > img {
+    width: 2rem;
+    height: 2rem;
 }
 
 .services > h4 {
@@ -159,4 +170,22 @@ header > div {
     font-size: 1.5em;
 }
 
+/* ---------------------4.5------------------*/
+
+form {
+    background-color: var(--blue-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----------------------- 4.9 -------------------*/
+
+footer {
+    background-color: var(--black-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+}
 /* ------------------------------- 5. Media Queries -------------------------------- */
