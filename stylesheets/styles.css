@@ -14,18 +14,149 @@
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@100;300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+}
+
 /* ------------------------------- 2. Typography ----------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
+
+:root {
+    --purple-color: #5722CD;
+    --blue-color: #4845E4;
+    --pink-color: #ED4385;
+    --black-color: #0C0C0C;
+    --lightpurple-color: #F2F0FF;
+    --lightgrey-color: #F3F6F9;
+    --grey-color: #7A7A7A;
+}
 
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
+header {
+    background: linear-gradient(320deg, rgba(87,34,205,1) 18%, rgba(72,69,228,1) 44%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    padding: 0 20px;
+    text-align: center;
+    color: white;
+    line-height: 1.5;
+}
+
+nav {
+
+}
+
+nav > ul {
+    display: flex;
+    list-style: none;
+    gap: 2em;
+    color: white;
+}
+
+header > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+}
+
+.workTogether {
+    background-color: indianred;
+    font-size: 0.7em;
+    padding: 10px;
+    border-radius: 35px;
+    border: none;
+    color: white;
+}
 
 /* --------------- 4.2 Introduction ------------------- */
+
+.introduction {
+    display: flex;
+    min-height: 300px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue-color);
+}
+
+.introduction >div > p {
+    color: var(--black-color);
+}
+
+/* ---------------- 4.3 Main article -------------------*/
+
+.publications {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightgrey-color);
+    padding: 2em 3em 5em 2em;
+    justify-content: space-around;
+}
+
+.publications > article {
+    display: flex;
+    align-items: center;
+}
+
+.publications > article:nth-of-type(2) {
+    flex-direction: row-reverse;
+}
+
+.publications > article > span > img {
+    box-shadow: 5px 5px 10px grey;
+    border-radius: 5px;
+    width: 80%;
+    margin: 2em;
+}
+
+/* ----------------------------- 4.4 services ---------------------------*/
+.servicesInTabel {
+    display: flex;
+    padding: 2em 3em 2em 5em;
+}
+
+.allKindOfServices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    gap: 2em;
+}
+
+.services {
+    border: 1px solid var(--blue-color);
+    padding: 2em;
+    max-width: 40em;
+    max-height: 40em;
+    font-size: 14px;
+}
+
+.services > h4 {
+    color: var(--blue-color);
+    font-size: 1.5em;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
