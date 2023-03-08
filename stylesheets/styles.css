@@ -46,6 +46,19 @@ p {
     --grey-color: #7A7A7A;
 }
 
+.outerContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.innerContainer {
+    flex-basis: 1200px;
+    margin: 0 5em 5em 0;
+
+    /*display: flex;
+    flex-direction: column;*/
+}
+
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
@@ -61,6 +74,7 @@ header {
     text-align: center;
     color: white;
     line-height: 1.5;
+    position: relative;
 }
 
 nav {
@@ -73,7 +87,11 @@ nav > ul {
     display: flex;
     list-style: none;
     gap: 2em;
+}
+
+nav > ul > li > a {
     color: white;
+    text-decoration: none;
 }
 
 header > div {
@@ -99,8 +117,16 @@ header > div {
 
 .image-squiggle-stripe {
     background-image: url(../assests/squiggle_line_stripe.svg);
-    width: 80px;
-    height: 100px;
+    width: 79px;
+    height: 60px;
+    position: absolute;
+    bottom: -80px;
+}
+
+.image-squiggle-line {
+    background-image: url(../assests/squiggle_line.svg);
+    width: 60px;
+    height: 6px;
 }
 
 /* --------------- 4.2 Introduction ------------------- */
@@ -162,9 +188,9 @@ header > div {
 .services {
     border: 1px solid var(--blue-color);
     padding: 2em;
-    max-width: 20rem;
-    max-height: 20rem;
     font-size: 14px;
+    flex: 0 1 250px;
+
 }
 
 .services > img {
