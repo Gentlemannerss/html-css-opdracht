@@ -27,7 +27,7 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', serif;
 }
-p {
+p, li, a, label, input::placeholder{
     font-family: 'Roboto', sans-serif;
 }
 
@@ -157,17 +157,26 @@ header > div {
 .publications > article {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 }
 
-.publications > article:nth-of-type(2) {
+.publications > article > div {
+    padding-left: 80px;
+}
+
+.publications > article:nth-of-type(even) {
     flex-direction: row-reverse;
 }
 
 .publications > article > span > img {
     box-shadow: 5px 5px 10px grey;
     border-radius: 5px;
-    width: 80%;
+    width: 100%;
     margin: 2em;
+}
+
+.image-wrapper {
+    flex: 0 1 500px;
 }
 
 /* ----------------------------- 4.4 services ---------------------------*/
@@ -219,6 +228,9 @@ form {
     flex-direction: column;
     padding: 2rem;
 }
+
+/* 4.8 Form*/
+
 
 /* ----------------------- 4.9 -------------------*/
 
