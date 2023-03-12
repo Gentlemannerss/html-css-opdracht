@@ -76,9 +76,20 @@ h1, h2, h3, h4, h5, h6 {
 /* ---------------------- 4.1 Header -------------------------- */
 header, #contactUs {
     background: linear-gradient(320deg, rgba(87,34,205,1) 18%, rgba(72,69,228,1) 44%);
+    mask-image: url("../assests/noise-texture.png");
     color: white;
     position: relative;
     isolation: isolate;
+}
+
+/*------Bonus : Texture noise on background-------*/
+header::after,
+#contactUs::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    mask-image: url("../assests/noise-texture.png");
 }
 
 nav {
@@ -128,7 +139,7 @@ header > section > div > h1 {
     left: calc(50% - 40px);
 }
 
-header > section > .innerContainer::after {
+header > section > .innerContainer::before {
     content: '';
     width: 0;
     height: 0;
@@ -163,6 +174,8 @@ header > section > .innerContainer::after {
     font-size: 15rem;
     font-weight: bold;
 }
+
+
 /* --------------- 4.2.2 Publications ---------------------- */
 .publications {
     padding: 10em 0 3em 0;
@@ -241,6 +254,7 @@ header > section > .innerContainer::after {
     border-radius: 5px;
     width: 100%;
 }
+
 /* --------------- 4.2.3 Services ---------------------- */
 .outerContainer:nth-of-type(3) .innerContainer {
     flex-direction: row;
@@ -285,6 +299,21 @@ header > section > .innerContainer::after {
     color: var(--blue-color);
     font-size: 1.2rem;
     padding-bottom: 1rem;
+}
+
+
+/*------- Making sure the line will move under a link --------*/
+.publications a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: var(--blue-color);
+    transition: width .35s ease-in-out;
+}
+
+.publications a:hover::after {
+    width: 100%;
 }
 /* --------------- 4.2.4 Form -------------------------- */
 form {
