@@ -14,18 +14,232 @@
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@100;300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+}
+
 /* ------------------------------- 2. Typography ----------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+p, li, a, label, input::placeholder{
+    font-family: 'Roboto', sans-serif;
+}
+
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
+
+:root {
+    --purple-color: #5722CD;
+    --blue-color: #4845E4;
+    --pink-color: #ED4385;
+    --black-color: #0C0C0C;
+    --lightpurple-color: #F2F0FF;
+    --lightgrey-color: #F3F6F9;
+    --grey-color: #7A7A7A;
+}
+
+.outerContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.innerContainer {
+    flex-basis: 1200px;
+    margin: 0 5em 5em 0;
+
+    /*display: flex;
+    flex-direction: column;*/
+}
 
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
+header {
+    background: linear-gradient(320deg, rgba(87,34,205,1) 18%, rgba(72,69,228,1) 44%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2em 2em 2em;
+    text-align: center;
+    color: white;
+    line-height: 1.5;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+nav > ul {
+    display: flex;
+    list-style: none;
+    gap: 2em;
+}
+
+nav > ul > li > a {
+    color: white;
+    text-decoration: none;
+}
+
+header > div {
+    margin-top: 3em;
+    margin-bottom: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+}
+
+.workTogether {
+    background-color: var(--pink-color);
+    font-size: 0.7em;
+    padding: 15px;
+    margin-top: 1em;
+    border-radius: 35px;
+    border: none;
+    color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.50);
+    text-transform: uppercase;
+}
+
+.image-squiggle-stripe {
+    background-image: url(../assests/squiggle_line_stripe.svg);
+    width: 79px;
+    height: 60px;
+    position: absolute;
+    bottom: -80px;
+}
+
+.image-squiggle-line {
+    background-image: url(../assests/squiggle_line.svg);
+    width: 60px;
+    height: 6px;
+}
 
 /* --------------- 4.2 Introduction ------------------- */
 
+.introduction {
+    display: flex;
+    min-height: 300px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue-color);
+}
+
+.introduction >div > p {
+    color: var(--black-color);
+}
+
+/* ---------------- 4.3 Main article -------------------*/
+
+.publications {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightgrey-color);
+    padding: 2em 3em 5em 2em;
+    justify-content: space-around;
+}
+
+.publications > article {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.publications > article > div {
+    padding-left: 80px;
+}
+
+.publications > article:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+.publications > article > span > img {
+    box-shadow: 5px 5px 10px grey;
+    border-radius: 5px;
+    width: 100%;
+    margin: 2em;
+}
+
+.image-wrapper {
+    flex: 0 1 500px;
+}
+
+/* ----------------------------- 4.4 services ---------------------------*/
+.servicesInTabel {
+    display: flex;
+    padding: 2em 3em 2em 5em;
+}
+
+.allKindOfServices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.services {
+    border: 1px solid var(--blue-color);
+    padding: 2em;
+    font-size: 14px;
+    flex: 0 1 250px;
+
+}
+
+.services > img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.services > h4 {
+    color: var(--blue-color);
+    font-size: 1.5em;
+}
+
+/* ---------------------4.5------------------*/
+
+.formAndText {
+    background-color: var(--blue-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+/* 4.8 Form*/
+
+
+/* ----------------------- 4.9 -------------------*/
+
+footer {
+    background-color: var(--black-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    font-size: 10px;
+}
 /* ------------------------------- 5. Media Queries -------------------------------- */
