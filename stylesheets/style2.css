@@ -74,7 +74,6 @@ h1, h2, h3, h4, h5, h6 {
 /* ---------------------- 4.1 Header -------------------------- */
 header, #contactUs {
     background: linear-gradient(320deg, rgba(87,34,205,1) 18%, rgba(72,69,228,1) 44%);
-    mask-image: url("../assests/noise-texture.png"); /*Dit werkt ook niet!*/
     color: white;
     position: relative;
     isolation: isolate;
@@ -126,6 +125,10 @@ header > section > div > h1 {
     text-transform: uppercase;
     align-self: center;
     cursor: pointer;
+}
+
+.workTogether:active {
+    background-color: #fc7bff;
 }
 
 .image-squiggle-stripe {
@@ -325,6 +328,7 @@ form {
 .formContainer > label {
     font-size: .75rem;
     font-weight: bolder;
+    margin-bottom: 1em;
 }
 
 #name, #email, #message {
