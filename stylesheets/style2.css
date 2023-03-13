@@ -61,7 +61,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .innerContainer {
     flex-basis: 1200px;
-
     display: flex;
     flex-direction: column;
     margin: 0 1rem;
@@ -69,14 +68,13 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     text-align: center;
     gap: 1rem;
-
 }
 /* ---------------------- 3.2 Specific ------------------------ */
 /* ------------------------------- 4. Areas ---------------------------------------- */
 /* ---------------------- 4.1 Header -------------------------- */
 header, #contactUs {
     background: linear-gradient(320deg, rgba(87,34,205,1) 18%, rgba(72,69,228,1) 44%);
-    mask-image: url("../assests/noise-texture.png");
+    mask-image: url("../assests/noise-texture.png"); /*Dit werkt ook niet!*/
     color: white;
     position: relative;
     isolation: isolate;
@@ -141,13 +139,12 @@ header > section > div > h1 {
 
 header > section > .innerContainer::before {
     content: '';
-    width: 0;
-    height: 0;
     border-style: solid;
-    border-width: 50px 100vw 33px 0; /* adjust the border-width values to change the size of the triangle */
+    border-width: 50px 98vw 33px 0; /* adjust the border-width values to change the size of the triangle */
     border-color: transparent transparent white transparent; /*color*/
     position: absolute;
     bottom: 0;
+    left: 0;
 }
 /* --------------- 4.1.1 Navigation Bar ---------------- */
 /* --------------- 4.1.2 Hero Section ------------------ */
@@ -274,18 +271,16 @@ header > section > .innerContainer::before {
     z-index: -1;
     color: var(--lightgrey-color);
     opacity: 0.8;
-    font-size: 15rem;
+    font-size: 15em;
     font-weight: bold;
     top: 0;
 }
-
 
 .services {
     border: 1px solid var(--blue-color);
     background-color: white;
     opacity: 0.9;
-    flex: 0 1 250px;
-    /*max-height: 250px;  Op zoek naar een manier wanener het wel kan groeien. maar de doosjes exact blijven*/
+    flex: 0 1 300px;
     padding: 1rem;
     box-shadow: 0 5px 10px lightgrey;
 }
@@ -349,20 +344,17 @@ form {
     isolation: isolate;
 }
 
-.theForm::before {
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 33px 100vw; /* adjust the border-width values to change the size of the triangle */
-    border-color: transparent transparent white transparent; /*color*/
-    top: 0;
-    position: absolute;
-    background-color: red;
-
-}
 /* ---------------------- 4.3 Footer -------------------------- */
 /* --------------- 4.3.1 Footer Bar -------------------- */
+.samStyling {
+    border-style: solid;
+    border-width: 0 98vw 33px 0;
+    border-color: transparent white transparent transparent;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
 footer {
     background-color: var(--black-color);
     color: white;
@@ -370,9 +362,32 @@ footer {
     font-size: 10px;
 }
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media  screen and (max-width: 990px) {
+    .allKindOfServices::before,
+    .publications::before,
+    .introduction::before {
+        font-size: 10em;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .allKindOfServices::before,
+    .publications::before,
+    .introduction::before {
+        font-size: 8em;
+    }
+}
+
 @media  screen and (max-width: 500px) {
     html {
         font-size: 10px;
+    }
+
+    .allKindOfServices::before,
+    .publications::before,
+    .introduction::before {
+        font-size: 5em;
     }
 
     nav {
@@ -395,5 +410,13 @@ footer {
 
     #caseStudies > div > article {
         flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .allKindOfServices::before,
+    .publications::before,
+    .introduction::before {
+        font-size: 4em;
     }
 }
