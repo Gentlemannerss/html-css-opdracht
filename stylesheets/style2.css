@@ -412,6 +412,10 @@ footer {
         top: 25px;
     }
 
+    .image-squiggle-stripe {
+        height: 40px;
+    }
+
     #caseStudies > div > article {
         flex-direction: column-reverse;
     }
