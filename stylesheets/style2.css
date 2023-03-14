@@ -168,7 +168,7 @@ header > section > .innerContainer::before {
     content: "hello";
     position: absolute;
     z-index: -1;
-    color: var(--lightgrey-color);
+    color: var(--lightpurple-color);
     opacity: 0.8;
 
     font-size: 15rem;
@@ -260,6 +260,7 @@ header > section > .innerContainer::before {
     flex-direction: row;
     flex-wrap: wrap;
     text-align: left;
+    align-items: normal;
 }
 
 .allKindOfServices {
@@ -272,7 +273,7 @@ header > section > .innerContainer::before {
     content: "services";
     position: absolute;
     z-index: -1;
-    color: var(--lightgrey-color);
+    color: var(--lightpurple-color);
     opacity: 0.8;
     font-size: 15em;
     font-weight: bold;
@@ -305,13 +306,15 @@ header > section > .innerContainer::before {
     content: "";
     display: block;
     width: 0;
-    height: 3px;
-    background-color: var(--blue-color);
+    height: 6px;
+    background-image: url(../assests/squiggle_line.svg);
+    /*background-color: var(--blue-color);*/
     transition: width .35s ease-in-out;
 }
 
 .publications a:hover::after {
-    width: 100%;
+    width: 55px;
+    background-repeat: no-repeat;
 }
 /* --------------- 4.2.4 Form -------------------------- */
 form {
